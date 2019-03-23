@@ -93,6 +93,14 @@ class App extends React.Component { //부모를 class 컴퍼넌트로! class컴�
 
   handleChangeScore = (id, delta) => {
     console.log(id, delta);
+    this.setState(prevState => {
+      prevState.players.forEach(item => {
+        if (item.id === id){
+          item.score += delta;
+        }
+      })
+      return {players: [...prevState.players]}
+    })
   }
 
   render() {
