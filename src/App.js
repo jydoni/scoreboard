@@ -1,26 +1,29 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import {Header} from "./components/Header";
+import {Player} from "./components/Player";
+/*import {Header} from './components/Header';*/
 
 
 
 /////////////////////component///////////////////////////
 
 
-const Header = (props) => {
-  console.log(props);
-  const {title, totalPlayers} = props; // destruct assignment
-  return(
-    <header>
-      <h1>{title}</h1>
-      <span className="stats">Players : {totalPlayers}</span>
-    </header>
-  )
-};
+// const Header = (props) => {
+//   console.log(props);
+//   const {title, totalPlayers} = props; // destruct assignment
+//   return(
+//     <header>
+//       <h1>{title}</h1>
+//       <span className="stats">Players : {totalPlayers}</span>
+//     </header>
+//   )
+// };
 
 
 ///////function 컴퍼넌트를 --> class 컴퍼넌트로 변경///////
-class Counter extends React.Component {
+/*class Counter extends React.Component {
 
   constructor(props) {
     super(props);
@@ -51,9 +54,9 @@ class Counter extends React.Component {
       </div>
     );
   }
-}
+}*/
 
-const Player = (props) => (
+/*const Player = (props) => (
   <div className="player">
     <span className="player-name">
       <button className="remove-player" onClick={() => props.handleRemovePlayer(props.id)}>x</button>
@@ -64,7 +67,7 @@ const Player = (props) => (
     </span>
     <Counter />
   </div>
-);
+);*/
 /*<Counter score={props.score}/>*/
 
 
