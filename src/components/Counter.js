@@ -3,13 +3,13 @@ import React from 'react';
 export class Counter extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
+    /*this.state = {
       name : "a",
       score: 30
-    }
+    }*/
   }
 
-  incrementScore = () => {
+  /*incrementScore = () => {
     console.log(this);
     // this.state.score = this.state.score + 1(x)
     // 변경을 하기 위해서는 setState를 호출
@@ -19,13 +19,13 @@ export class Counter extends React.Component {
         score : prevState.score + 1
       }
     });
-  }
+  }*/
 
   render() {
     return (
       <div className="counter">
         <button className="counter-action decrement"> - </button>
-        <span className="counter-score"> {this.state.score} </span>
+        <span className="counter-score"> {this.props.score} </span>
         <button className="counter-action increment" onClick={this.incrementScore}> + </button>
       </div>
     );

@@ -4,7 +4,7 @@ import './App.css';
 import {Header} from "./components/Header";
 import {Player} from "./components/Player";
 /*import {Header} from './components/Header';*/
-
+0
 
 
 /////////////////////component///////////////////////////
@@ -74,10 +74,10 @@ import {Player} from "./components/Player";
 class App extends React.Component { //부모를 class 컴퍼넌트로! class컴퍼넌트는 자기자신 this객체가 생겨 쓰인다.
   state = {
     players: [
-      {name: "LDK", id: 1},
-      {name: "HONE", id: 2},
-      {name: "KIM", id: 3},
-      {name: "PARK", id: 4}
+      {name: "LDK", score: 0, id: 1},
+      {name: "HONE", score: 0, id: 2},
+      {name: "KIM", score: 0, id: 3},
+      {name: "PARK", score: 0, id: 4}
     ]
   }
   // players가 동적으로 시간에 따라 변화하므로 state로 바꾸어주었다.
@@ -101,6 +101,7 @@ class App extends React.Component { //부모를 class 컴퍼넌트로! class컴�
 
             <Player name={player.name} key={player.id.toString()}
                     id={player.id}
+                    score={player.score}
                     handleRemovePlayer={this.handleRemovePlayer}/>
           ))
         }
