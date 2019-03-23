@@ -4,7 +4,6 @@ import './App.css';
 import {Header} from "./components/Header";
 import {Player} from "./components/Player";
 /*import {Header} from './components/Header';*/
-0
 
 
 /////////////////////component///////////////////////////
@@ -92,6 +91,10 @@ class App extends React.Component { //부모를 class 컴퍼넌트로! class컴�
     }))
   }
 
+  handleChangeScore = (id, delta) => {
+    console.log(id, delta);
+  }
+
   render() {
     return (
       <div className="scoreboard">
@@ -102,7 +105,8 @@ class App extends React.Component { //부모를 class 컴퍼넌트로! class컴�
             <Player name={player.name} key={player.id.toString()}
                     id={player.id}
                     score={player.score}
-                    handleRemovePlayer={this.handleRemovePlayer}/>
+                    handleRemovePlayer={this.handleRemovePlayer}
+                    handleChangeScore={this.handleChangeScore}/>
           ))
         }
       </div>
